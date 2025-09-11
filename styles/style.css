@@ -1,0 +1,20 @@
+/* nav oculto en movil */
+.main-nav {
+    display: none;
+    flex-direction: column;
+}
+#nav-toggle:checked + label + .main-nav {
+    display: flex;
+}
+
+/* enlaces visibles en desktop */
+@media screen and (width >= 426px) {
+    .burger{
+        display: none;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
