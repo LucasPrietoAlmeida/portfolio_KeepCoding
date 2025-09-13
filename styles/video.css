@@ -1,0 +1,44 @@
+body {
+    background-color: #1E2326;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.mockup-container {
+    position: relative;
+    display: inline-block;
+    height: 90vh; /* tamaño del mockup */
+}
+
+.video {
+    position: absolute;
+    top: 7.5%;   /* baja un poco para alinearlo con la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;  /* ajusta ancho para que encaje en el hueco */
+    height: 73%; /* ajusta altura */
+    object-fit: cover; /* rellena el hueco sin deformarse */
+    border-radius: 20px; /* opcional, simula esquinas redondeadas */
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    height: 80vh;  /* tamaño del mockup */
+    z-index: 2;    /* siempre encima */
+}
+
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
