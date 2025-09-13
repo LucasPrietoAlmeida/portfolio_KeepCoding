@@ -6,7 +6,7 @@
 #nav-toggle:checked + label + .main-nav {
     display: flex;
 }
-
+    /* Banner */
 #banner {
     height: 50vh;
     display: flex;
@@ -18,6 +18,35 @@
     background-size: cover;
     background-position: center;
 
+}
+    /* About*/ 
+.bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    width: 0;
+    animation: fill 2s forwards;
+}
+
+.progress.html {
+    background: orange;
+    --target: 90%;
+    animation-delay: 0.3s;
+}
+
+.progress.css {
+    background: blue;
+    --target: 80%;
+    animation-delay: 0.6s;
+}
+
+@keyframes fill {
+    to { width: var(--target); } 
 }
 
 /* enlaces visibles en desktop */
