@@ -7,14 +7,34 @@
     display: flex;
 }
 
+#banner {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: url("../img/banner-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
 /* enlaces visibles en desktop */
 @media screen and (width >= 426px) {
-    .burger{
+    .burger {
         display: none;
     }
-    .main-nav{
+    .main-nav {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+    }
+}
+
+@media screen and (width >= 426px) {
+    #banner {
+        background-image: url(../img/banner-desktop.jpg);
+        height: 60vh;
     }
 }
