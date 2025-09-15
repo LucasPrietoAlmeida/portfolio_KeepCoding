@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Lucas Prieto</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo"><h1>Lucas Prieto</h1></div>
-    <input id="nav-toggle" type="checkbox">
+    <!-- <input id="nav-toggle" type="checkbox">
     <label for="nav-toggle" class="burger">
       <span></span><span></span><span></span>
-    </label>
+    </label> -->
     <nav class="main-nav">
-      <a href="#banner">Inicio</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#projects.html">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <ul class="menu">
+        <li><a href="#banner">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects-preview">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -35,6 +38,18 @@
         <span>CSS</span>
         <div class="bar"><div class="progress css"></div></div>
       </div>
+      <div class="skill">
+        <span>PHP</span>
+        <div class="bar"><div class="progress php"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="progress javascript"></div></div>
+      </div>
+      <div class="skill">
+        <span>SQL</span>
+        <div class="bar"><div class="progress sql"></div></div>
+      </div>
     </section>
     <section id="projects-preview">
       <h2>Proyectos</h2>
@@ -43,7 +58,7 @@
         <div class="card">Proyecto 2</div>
         <div class="card">Proyecto 3</div>
       </div>
-      <a href="projects.html">Ver todos</a>
+      <a href="projects.html" class="btn">Ver todos</a>
     </section>
     <section id="contact">
       <h2>Contacto</h2>
@@ -61,10 +76,12 @@
         <input type="text" name="github" placeholder="@usuario" pattern="^@[^\s]+" required>
         <textarea maxlength="180" placeholder="Tu mensaje" required></textarea>
 
-        <label><input type="checkbox" name="newsletter"> Suscribirme a la newsletter<label>
-
-        <button type="submit">Enviar</button>
-        <button type="submit">Reset</button>
+        <label><input type="checkbox" name="newsletter"> Suscribirme a la newsletter</label>
+        
+        <div class="form-buttons">
+          <button type="submit">Enviar</button>
+          <button type="reset">Reset</button>
+        </div>
       </form>
     </section>
   </main>
