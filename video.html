@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/video.css">
 </head>
 <body>
-<main>
-    <div class="mockup-container fadeIn">
-        <video autoplay muted class="video " controls>
-            <source src="video/video.mp4" type="video/mp4">
-        </video>
-        <img src="img/mockup-mobile.png" alt="mockup" class="overlay">
-    </div>
-</main>
+    <header class="site-header">
+        <div class="logo"><h1>Lucas Prieto</h1></div>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label for="nav-toggle" class="burger">
+        <span></span><span></span><span></span>
+        </label> 
+        <nav class="main-nav">
+        <ul class="menu">
+            <li><a href="#banner">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects-preview">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="mockup-container fadeIn">
+            <video autoplay muted class="video" controls loop>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+            <img src="img/mockup-mobile.png" alt="mockup" class="overlay">
+        </div>
+    </main>
 </body>
 </html>

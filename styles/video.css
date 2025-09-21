@@ -1,9 +1,6 @@
-body {
-    background-color: #1E2326;
-}
 
 main {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -12,31 +9,31 @@ main {
 .mockup-container {
     position: relative;
     display: inline-block;
-    height: 90vh; /* tamaño del mockup */
+    height: 90vh;
 }
 
 .video {
     position: absolute;
-    top: 7.5%;   /* baja un poco para alinearlo con la pantalla */
+    top: 7.5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;  /* ajusta ancho para que encaje en el hueco */
-    height: 73%; /* ajusta altura */
-    object-fit: cover; /* rellena el hueco sin deformarse */
-    border-radius: 20px; /* opcional, simula esquinas redondeadas */
+    width: 40%;
+    height: 73%;
+    object-fit: cover;
+    border-radius: 20px;
     z-index: 1;
 }
 
 .overlay {
     position: relative;
-    height: 80vh;  /* tamaño del mockup */
-    z-index: 2;    /* siempre encima */
+    height: 80vh;
+    z-index: 1;
 }
 
 
 .fadeIn {
     opacity: 0;
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 3s forwards;
 }
 
 @keyframes fadeIn {

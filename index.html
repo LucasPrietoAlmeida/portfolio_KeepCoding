@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Lucas Prieto</title>
-  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo"><h1>Lucas Prieto</h1></div>
-    <!-- <input id="nav-toggle" type="checkbox">
+    <input class="nav-toggle" id="nav-toggle" type="checkbox">
     <label for="nav-toggle" class="burger">
       <span></span><span></span><span></span>
-    </label> -->
+    </label> 
     <nav class="main-nav">
       <ul class="menu">
         <li><a href="#banner">Inicio</a></li>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#projects-preview">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
+        <li><a href="video.html">Video</a></li>
       </ul>
     </nav>
   </header>
@@ -29,7 +30,10 @@
     </section>
     <section id="about">
       <h2>Sobre mí</h2>
-      <p>Desarrollador Web FullStack</p>
+      <div class="description">
+        <p>Soy un Desarrollador Web FullStack apasionado por la tecnología y la creación de soluciones digitales eficientes.</p>
+        <p>Tengo experiencia trabajando con HTML, CSS, JavaScript, PHP y SQL. Me caracterizo por ser una persona autodidacta, orientada a resultados y con una fuerte motivación por seguir aprendiendo y creciendo profesionalmente en el mundo del desarrollo web.</p>
+      </div>
       <div class="skill">
         <span>HTML</span>
         <div class="bar"><div class="progress html"></div></div>
@@ -54,26 +58,38 @@
     <section id="projects-preview">
       <h2>Proyectos</h2>
       <div class="grid">
-        <div class="card">Proyecto 1</div>
-        <div class="card">Proyecto 2</div>
-        <div class="card">Proyecto 3</div>
+        <div class="card"><a href="https://lucasprietoalmeida.vercel.app/">Portfolio personal</a></div>
+        <div class="card"><a href="https://tictactoe-lucasprietoalmeida.vercel.app/">Tic Tac Toe</a></div>
+        <div class="card"><a href="https://timer-pomodoro-lucasprietoalmeida.vercel.app/">Timer Pomodoro</a></div>
       </div>
       <a href="projects.html" class="btn">Ver todos</a>
     </section>
     <section id="contact">
       <h2>Contacto</h2>
       <form>
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="text" name="apellidos" placeholder="Apellidos" required>
-        <input type="tel" name="telefono" placeholder="Teléfono" required>
+          <div class="form-field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="last_name">Apellidos</label>
+            <input type="text" name="last_name" id="last_name" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Teléfono</label>
+            <input type="tel" name="phone" id="phone" required>
+          </div>
 
-        <p>¿Cómo me conociste?</p>
-        <label><input type="radio" name="origen">Universidad</label>
-        <label><input type="radio" name="origen">KeepCoding Kick-off</label>
-        <label><input type="radio" name="origen">Colegio</label>
-        <label><input type="radio" name="origen">En GitHub</label>
+        <div class="radiobuttons">
+          <p>¿Cómo me conociste?</p>
+          <label><input type="radio" name="origen"> Universidad</label>
+          <label><input type="radio" name="origen"> KeepCoding Kick-off</label>
+          <label><input type="radio" name="origen"> Colegio</label>
+          <label><input type="radio" name="origen"> En GitHub</label>
+        </div>
 
-        <input type="text" name="github" placeholder="@usuario" pattern="^@[^\s]+" required>
+        <label for="github">Usuario de GitHub</label>
+        <input type="text" name="github" name="github" placeholder="@usuario" pattern="^@[^\s]+" required>
         <textarea maxlength="180" placeholder="Tu mensaje" required></textarea>
 
         <label><input type="checkbox" name="newsletter"> Suscribirme a la newsletter</label>
